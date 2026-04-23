@@ -15,12 +15,11 @@ from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env")
-
 
 def _require_env(name: str) -> str:
     value = os.environ.get(name)
@@ -58,9 +57,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "auth.apps.NeuroAuthConfig",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -145,9 +146,13 @@ STATIC_URL = "static/"
 # https://www.django-rest-framework.org/api-guide/settings/
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
+        "rest_framework.permissions.AllowAny",  # temporary for testing
     ],
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.SessionAuthentication",
-    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [],
 }
+SIMPLE_JWT = {
+    "USER_ID_FIELD": None,          # 🔥 disable default lookup
+    "USER_ID_CLAIM": "user_id",     # we control this
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=2),
+}
+CORS_ALLOW_ALL_ORIGINS = True
