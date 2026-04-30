@@ -1,0 +1,425 @@
+[2026-04-29 16:52:55,437] ERROR django.request Internal Server Error: /api/auth/login
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\utils\deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/auth/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2026-04-29 16:52:57,630] ERROR django.request Internal Server Error: /api/auth/login
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\utils\deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/auth/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2026-04-29 16:52:58,892] ERROR django.request Internal Server Error: /api/auth/login
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\utils\deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/auth/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2026-04-29 17:19:08,191] ERROR django.request Internal Server Error: /api/auth/login
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\utils\deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/auth/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2026-04-29 17:31:40,637] ERROR common.db Database error: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+
+[2026-04-29 17:31:40,696] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-29 17:31:40,698] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-29 17:35:31,998] ERROR common.db Database error: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+
+[2026-04-29 17:35:32,005] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-29 17:35:32,010] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-29 17:51:14,289] ERROR common.db Database error: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+[2026-04-29 17:51:14,301] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-29 17:51:14,308] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 00:50:24,227] ERROR common.db Database error: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+[2026-04-30 00:50:24,262] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-30 00:50:24,263] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 16:58:20,858] ERROR common.db Database error: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "action" of relation "activity_logs" does not exist
+LINE 3:                 (id, user_id, branch_id, action, entity_type...
+                                                 ^
+
+[2026-04-30 16:58:20,923] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-30 16:58:20,925] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 17:17:25,631] ERROR common.db Database error: column "details" of relation "activity_logs" does not exist
+LINE 3: ...er_id, branch_id, action, entity_type, entity_id, details, i...
+                                                             ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "details" of relation "activity_logs" does not exist
+LINE 3: ...er_id, branch_id, action, entity_type, entity_id, details, i...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "details" of relation "activity_logs" does not exist
+LINE 3: ...er_id, branch_id, action, entity_type, entity_id, details, i...
+                                                             ^
+
+[2026-04-30 17:17:25,641] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-30 17:17:25,646] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 17:28:20,378] ERROR common.db Database error: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "refresh_tokens" does not exist
+LINE 2:             INSERT INTO refresh_tokens (id, user_id, token, ...
+                                ^
+
+[2026-04-30 17:28:20,388] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-30 17:28:20,394] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 17:34:02,385] ERROR common.db Database error: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+Traceback (most recent call last):
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 16, in get_cursor
+    yield cursor
+  File "D:\Sem-4\Project\neuro-stock-server\common\db.py", line 44, in execute_write
+    cursor.execute(sql, params or [])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\kashy\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column "branch_id" of relation "refresh_tokens" does not exist
+LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
+                                                             ^
+
+[2026-04-30 17:34:02,394] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
+[2026-04-30 17:34:02,400] ERROR django.request Internal Server Error: /api/auth/login/
+[2026-04-30 17:38:57,611] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
