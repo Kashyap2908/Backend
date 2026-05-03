@@ -423,3 +423,10 @@ LINE 2: ...  INSERT INTO refresh_tokens (id, user_id, token, branch_id,...
 [2026-04-30 17:34:02,394] WARNING common.exception_handler App exception [DATABASE_ERROR]: A database error occurred | details=None
 [2026-04-30 17:34:02,400] ERROR django.request Internal Server Error: /api/auth/login/
 [2026-04-30 17:38:57,611] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-01 09:43:09,102] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-01 09:50:11,470] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-01 09:53:16,047] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-01 09:53:48,435] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-01 09:55:41,116] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-02 08:29:08,855] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
+[2026-05-02 08:32:36,052] INFO services.auth_service User admin@neurostock.local logged in from 127.0.0.1
